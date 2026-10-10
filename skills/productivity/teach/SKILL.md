@@ -1,15 +1,19 @@
 ---
 name: teach
-description: Teach the user a new skill or concept, within this workspace.
+description: "Workspace projects: Teach the user a new skill or concept, within this workspace."
 disable-model-invocation: true
 argument-hint: "What would you like to learn about?"
 ---
+
+## Workspace prerequisite
+
+Read [Workspace contract](../../../WORKSPACE.md) and run its project resolver before using this skill. Use the selected checkout, central entry and output paths. This skill requires a registered Workspace project.
 
 The user has asked you to teach them something. This is a stateful request - they intend to learn the topic over multiple sessions.
 
 ## Teaching Workspace
 
-Treat the current directory as a teaching workspace. Workspace paths (`./lessons/` and the rest) resolve from the directory `/teach` was run in; only the `*-FORMAT.md` links resolve from this skill's folder. The state of their learning is captured in this directory in several files:
+Resolve a persistent teaching directory with `workspace.py path --kind teaching --topic <topic>`. All teaching state, lessons, references and assets below resolve from that returned directory, not the task cwd. Only the `*-FORMAT.md` links resolve from this skill's folder. The state of their learning is captured in several files:
 
 - `MISSION.md`: A document capturing the _reason_ the user is interested in the topic. This should be used to ground all teaching. Use the format in [MISSION-FORMAT.md](./MISSION-FORMAT.md).
 - `./reference/*.html`: A directory of reference materials. These are the compressed learnings from the lessons - cheat sheets, reference algorithms, syntax, yoga poses, glossaries. They are the raw units of learning. They should be beautiful documents which print out well, and are designed for quick reference.

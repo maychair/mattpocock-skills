@@ -17,9 +17,12 @@ Reach for it when the next thing blocking you is a trip through a dashboard:
 | A project has to move from state A to state B once | Walks the transition and reports what it could not do |
 | You are about to write those steps into a README | Writes an executable version instead, which fails visibly when a step goes stale |
 
-Don't reach for it to *decide* what to build; for that, [grill-with-docs](https://aihero.dev/skills-grill-with-docs) and [to-spec](https://aihero.dev/skills-to-spec) are the tools.
+Don't reach for it to *decide* what to build; for that, [grill-with-docs](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/grill-with-docs.md) and [to-spec](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/to-spec.md) are the tools.
 
 ## Prerequisites
+
+Requires a registered Workspace project. Configuration, local tickets and outputs follow the [Workspace contract](https://github.com/maychair/mattpocock-skills/blob/main/WORKSPACE.md); existing tracker and domain paths are preserved.
+
 
 None to generate one. The wizard it writes runs on bash, and uses `gh` when a stage sets a GitHub secret or variable. If `gh` is missing or not authenticated, the run does not fail. That stage shows a warning, and the closing summary tells you what to set by hand.
 
@@ -93,4 +96,4 @@ It did. It's now model-invoked, so the agent reaches for it unprompted when it h
 
 ## Where it fits
 
-`wizard` is a reach-for-it-anytime standalone, sitting at the line where automation stops and a human has to click. Its nearest neighbour is [setup-matt-pocock-skills](https://aihero.dev/skills-setup-matt-pocock-skills), because both exist to get a repo into a working state. That one configures this skill set, and `wizard` generates a setup path for everything else. It also pairs with [implement](https://aihero.dev/skills-implement): when a build lands a feature that needs credentials or a manual cutover, a wizard covers the steps only a human can do. When you're unsure which skill fits the moment, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.
+`wizard` is a reach-for-it-anytime standalone, sitting at the line where automation stops and a human has to click. Its nearest neighbour is [setup-matt-pocock-skills](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/setup-matt-pocock-skills.md), because both exist to get a repo into a working state. That one configures this skill set, and `wizard` generates a setup path for everything else. It also pairs with [implement](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/implement.md): when a build lands a feature that needs credentials or a manual cutover, a wizard covers the steps only a human can do. When you're unsure which skill fits the moment, [ask-matt](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/ask-matt.md) routes you.

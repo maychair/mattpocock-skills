@@ -1,0 +1,16 @@
+{
+  "name": "maychair-workspace",
+  "owner": {
+    "name": "maychair"
+  },
+  "plugins": [
+    {
+      "name": "workspace-mattpocock-skills",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "description": "Matt Pocock engineering workflows adapted exclusively to registered Workspace projects."
+    }
+  ]
+}

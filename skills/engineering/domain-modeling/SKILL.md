@@ -1,7 +1,11 @@
 ---
 name: domain-modeling
-description: Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR.
+description: "Workspace projects: Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR."
 ---
+
+## Workspace prerequisite
+
+Read [Workspace contract](../../../WORKSPACE.md) and run its project resolver before using this skill. Use the selected checkout, central entry and output paths. This skill requires a registered Workspace project.
 
 # Domain Modeling
 

@@ -1,8 +1,12 @@
 ---
 name: implement-spec
-description: "Implement the result of /to-spec and /to-tickets in code."
+description: "Workspace projects: Implement the result of /to-spec and /to-tickets in code."
 disable-model-invocation: true
 ---
+
+## Workspace prerequisite
+
+Read [Workspace contract](../../../WORKSPACE.md) and run its project resolver before using this skill. Use the selected checkout, central entry and output paths. This skill requires a registered Workspace project.
 
 You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.
 

@@ -1,3 +1,9 @@
+# Workspace fork scope
+
+This fork owns Workspace-only adaptation of the promoted engineering and productivity skills. Changes must retain engineering discipline, user/model invocation boundaries and upstream author credit. Project selection, central configuration, local ticket defaults, portable output paths and Codex delivery are in scope. Host-specific plugin code and private company inventories are outside this repository.
+
+The original upstream curation policy is retained below as context for upstream contributions; Workspace changes are developed in this fork.
+
 # Scope
 
 This repo is the set of skills I use every day. It is curated: ideas are welcome, and each one is judged against the bar below. Issues are for tracking changes to the skills. Questions and discussion go to [GitHub Discussions](https://github.com/mattpocock/skills/discussions).

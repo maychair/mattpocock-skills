@@ -10,7 +10,7 @@
 
 # Skills For Real Engineers
 
-[![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills)
+[Workspace fork](https://github.com/maychair/mattpocock-skills)
 
 My agent skills that I use every day to do real engineering - not vibe coding.
 
@@ -22,89 +22,24 @@ If you want to keep up with changes to these skills, and any new ones I create, 
 
 [Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter)
 
+## Workspace fork
+
+This repository is the Workspace-only workflow skill source maintained at [maychair/mattpocock-skills](https://github.com/maychair/mattpocock-skills). It retains Matt Pocock's engineering flows and implements its own Workspace integration. Read [WORKSPACE.md](WORKSPACE.md) for project resolution, central configuration, local tickets and retained output locations.
+
 ## Installation (30-second setup)
 
-A plugin updates itself. [skills.sh](https://skills.sh/mattpocock/skills) copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice.
+Install the whole Codex plugin:
 
-### 1. Get the skills
-
-<details>
-<summary><strong>Claude Code</strong></summary>
-
-```bash
-claude plugin install mattpocock-skills@claude-plugins-official
+```sh
+codex plugin marketplace add maychair/mattpocock-skills
+codex plugin add workspace-mattpocock-skills@maychair-workspace
 ```
 
-Updates itself by default.
+In Codex, use `$` or the skill picker to select `setup-matt-pocock-skills` once for a registered project. At the Workspace root, supply its project ID; project and verified worktree sessions can identify their owner directly. New projects default to local tickets. Existing central entries and remote trackers remain unchanged.
 
-</details>
+The setup entry is in Workspace's Local/mattskills; actual local work is stored under Tasks. Setup creates no sample tickets or project agent-entry block. User-invoked flows stay explicit, and reusable auxiliary skills keep their automatic invocation policies. There is no ordinary-repository mode. Use one installed provider for these workflows and do not use the upstream link-skills script for Workspace installation.
 
-<details>
-<summary><strong>Codex</strong></summary>
-
-```bash
-codex plugin marketplace add mattpocock/skills
-codex plugin add mattpocock-skills@mattpocock
-```
-
-Updates itself at startup.
-
-</details>
-
-<details>
-<summary><strong>GitHub Copilot</strong> (CLI and VS Code)</summary>
-
-```bash
-copilot plugin marketplace add mattpocock/skills
-copilot plugin install mattpocock-skills@mattpocock
-```
-
-Then, once, add to `~/.copilot/settings.json`:
-
-```json
-{
-  "extraKnownMarketplaces": {
-    "mattpocock": { "source": { "source": "github", "repo": "mattpocock/skills" }, "autoUpdate": true }
-  }
-}
-```
-
-In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily.
-
-</details>
-
-<details>
-<summary><strong>Gemini CLI</strong> (manual updates)</summary>
-
-```bash
-gemini skills install https://github.com/mattpocock/skills.git --path skills/engineering
-gemini skills install https://github.com/mattpocock/skills.git --path skills/productivity
-```
-
-Re-run both commands to update.
-
-</details>
-
-<details>
-<summary><strong>Any other agent, or editable files</strong> (manual updates)</summary>
-
-```bash
-npx skills@latest add mattpocock/skills -a <agent>  # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose
-```
-
-When the installer asks which skills to take, include `setup-matt-pocock-skills`. To update, run `npx skills@latest update`, and re-run `add` to pick up new skills.
-
-</details>
-
-### 2. Run `/setup-matt-pocock-skills`
-
-In your agent, run it once per repo. It will:
-
-- Ask you which issue tracker you want to use (GitHub, GitLab, local files, or anything else you describe)
-- Ask you what labels you apply to tickets when you triage them (`/triage` uses labels)
-- Ask you where you want to save any docs we create
-
-### 3. Bam - you're ready to go.
+For a feature branch, use `--ref <branch>` with marketplace add. For development, add this checkout as a local marketplace and reinstall after source changes. Existing chats may keep old metadata; verify the installed plugin in a new chat. Copying a single skill folder does not carry the shared adapter and is unsupported.
 
 ## Why These Skills Exist
 
@@ -248,7 +183,7 @@ General workflow tools, not code-specific.
 
 - **[grill-me](./skills/productivity/grill-me/SKILL.md)**: Get relentlessly interviewed about a plan or design until every branch of the design tree is resolved.
 - **[handoff](./skills/productivity/handoff/SKILL.md)**: Compact the current conversation into a handoff document so another agent can continue the work.
-- **[teach](./skills/productivity/teach/SKILL.md)**: Teach the user a new skill or concept over multiple sessions, using the current directory as a stateful teaching workspace.
+- **[teach](./skills/productivity/teach/SKILL.md)**: Teach the user a new skill or concept over multiple sessions, using a persistent Workspace teaching directory.
 - **[to-questionnaire](./skills/productivity/to-questionnaire/SKILL.md)**: Turn a decision you can't answer alone into a Markdown questionnaire for the one person who can, filled in async, or together over a meeting. It grills you about the send (who it's for, what you need back), not the subject.
 - **[wait-what](./skills/productivity/wait-what/SKILL.md)**: Fire this the moment a message doesn't land. The agent re-pitches it with the context you're missing, in plain English, using your `GLOSSARY.md` vocabulary.
 

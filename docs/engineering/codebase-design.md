@@ -15,10 +15,10 @@ Several skills are close to it. Pick by the problem you have:
 | The problem | The skill |
 |---|---|
 | The shape of one module: its interface, its seam, its depth | `codebase-design` |
-| The *words of the domain*: "account" means three things, two people mean different things by "cancellation" | [domain-modeling](https://aihero.dev/skills-domain-modeling) |
-| You don't yet know *which* module to redesign | [improve-codebase-architecture](https://aihero.dev/skills-improve-codebase-architecture) (the survey that finds candidates) |
-| You want the design argued with, not just named | [grilling](https://aihero.dev/skills-grilling) |
-| There's a concrete behaviour to build and you want tests that survive a refactor | [tdd](https://aihero.dev/skills-tdd) |
+| The *words of the domain*: "account" means three things, two people mean different things by "cancellation" | [domain-modeling](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/domain-modeling.md) |
+| You don't yet know *which* module to redesign | [improve-codebase-architecture](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/improve-codebase-architecture.md) (the survey that finds candidates) |
+| You want the design argued with, not just named | [grilling](https://github.com/maychair/mattpocock-skills/blob/main/docs/productivity/grilling.md) |
+| There's a concrete behaviour to build and you want tests that survive a refactor | [tdd](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/tdd.md) |
 
 ## The vocabulary
 
@@ -83,6 +83,10 @@ People have proposed those. [Issue #180](https://github.com/mattpocock/skills/is
 - Discussion of an interface covers invariants, ordering and error modes, not only the type signature.
 - Invoking it does not start a session. If the agent begins reading files and proposing refactors from `/codebase-design` alone, it has mistaken the reference for a driver.
 
+## Prerequisites
+
+Requires a registered Workspace project. Configuration, local tickets and outputs follow the [Workspace contract](https://github.com/maychair/mattpocock-skills/blob/main/WORKSPACE.md); existing tracker and domain paths are preserved.
+
 ## Where it fits
 
-`codebase-design` is a **reach-for-it-anytime standalone**, and the vocabulary layer underneath the engineering skills rather than a step in any chain. Its closest neighbour is [domain-modeling](https://aihero.dev/skills-domain-modeling), the parallel reference for the *problem domain*'s words rather than the module's shape. The two are usually wanted together, since naming a deep module well needs both. [improve-codebase-architecture](https://aihero.dev/skills-improve-codebase-architecture) is the other: it surveys a codebase for deepening candidates and writes every one of them in this glossary, so it finds the module and you design it in this skill's words. When you're unsure which skill or flow fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.
+`codebase-design` is a **reach-for-it-anytime standalone**, and the vocabulary layer underneath the engineering skills rather than a step in any chain. Its closest neighbour is [domain-modeling](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/domain-modeling.md), the parallel reference for the *problem domain*'s words rather than the module's shape. The two are usually wanted together, since naming a deep module well needs both. [improve-codebase-architecture](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/improve-codebase-architecture.md) is the other: it surveys a codebase for deepening candidates and writes every one of them in this glossary, so it finds the module and you design it in this skill's words. When you're unsure which skill or flow fits, [ask-matt](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/ask-matt.md) routes you.
