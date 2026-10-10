@@ -1,8 +1,12 @@
 ---
 name: to-questionnaire
-description: Turn a decision you can't fully answer into a questionnaire for someone else to fill in.
+description: "Workspace projects: Turn a decision you can't fully answer into a questionnaire for someone else to fill in."
 disable-model-invocation: true
 ---
+
+## Workspace prerequisite
+
+Read [Workspace contract](../../../WORKSPACE.md) and run its project resolver before using this skill. Use the selected checkout, central entry and output paths. This skill requires a registered Workspace project.
 
 Turn something the user can't answer alone into a **questionnaire**: a Markdown document they hand to one person to fill in async, or fill out together over a meeting. The recipient holds knowledge the user lacks; the questionnaire pulls it out of them.
 
@@ -13,7 +17,7 @@ Turn something the user can't answer alone into a **questionnaire**: a Markdown 
 
 2. **What do you need back?** Ask, in one exchange, the specific decisions or facts the user can't resolve alone and needs from this person. Done when you have a concrete list of what the user must walk away able to do or decide.
 
-3. **Write the questionnaire.** Draft questions aimed at the gap from steps 1–2, following the Document structure below. Write it to `to-questionnaire-<slug>.md` in the current directory (slug from the topic) and report the path. Done when the file exists and every item the user named in step 2 is covered by a question.
+3. **Write the questionnaire.** Draft questions aimed at the gap from steps 1–2, following the Document structure below. Resolve its output with `workspace.py path --kind scratch --topic <topic> --name to-questionnaire-<slug>.md` and report the actual path. Done when the file exists and every item the user named in step 2 is covered by a question.
 
 ## Document structure
 

@@ -1,8 +1,12 @@
 ---
 name: retro
-description: "Conduct a retrospective on a coding session."
+description: "Workspace projects: Conduct a retrospective on a coding session."
 disable-model-invocation: true
 ---
+
+## Workspace prerequisite
+
+Read [Workspace contract](../../../WORKSPACE.md) and run its project resolver before using this skill. Use the selected checkout, central entry and output paths. This skill requires a registered Workspace project.
 
 The user has asked for a **retrospective**. You are suggesting improvements to the coding agent's **environment** to improve future runs.
 

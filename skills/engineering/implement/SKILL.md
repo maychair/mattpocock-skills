@@ -1,8 +1,12 @@
 ---
 name: implement
-description: "Implement a piece of work based on a spec or set of tickets."
+description: "Workspace projects: Implement a piece of work based on a spec or set of tickets."
 disable-model-invocation: true
 ---
+
+## Workspace prerequisite
+
+Read [Workspace contract](../../../WORKSPACE.md) and run its project resolver before using this skill. Use the selected checkout, central entry and output paths. This skill requires a registered Workspace project.
 
 Implement the work described by the user in the spec or tickets.
 

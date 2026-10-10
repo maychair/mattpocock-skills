@@ -14,12 +14,15 @@ Reach for it when the learning is the project: a language, a framework, a codeba
 | --- | --- |
 | To learn a topic over weeks, with sessions that accumulate | `teach` |
 | One idea explained inside the session you are already in | Just ask, in that session |
-| The agent's last message re-pitched because it didn't land | [wait-what](https://aihero.dev/skills-wait-what) |
-| To sharpen thinking you already have, rather than acquire new material | [grill-me](https://aihero.dev/skills-grill-me) |
-| A background agent to read [primary sources](https://www.aihero.dev/ai-coding-dictionary/primary-source) and leave you a cited document | [research](https://aihero.dev/skills-research) |
-| To learn something that came up mid-grilling, without derailing the [grilling](https://www.aihero.dev/ai-coding-dictionary/grilling) | [handoff](https://aihero.dev/skills-handoff) out to a teaching workspace, then `teach` there |
+| The agent's last message re-pitched because it didn't land | [wait-what](https://github.com/maychair/mattpocock-skills/blob/main/docs/productivity/wait-what.md) |
+| To sharpen thinking you already have, rather than acquire new material | [grill-me](https://github.com/maychair/mattpocock-skills/blob/main/docs/productivity/grill-me.md) |
+| A background agent to read [primary sources](https://www.aihero.dev/ai-coding-dictionary/primary-source) and leave you a cited document | [research](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/research.md) |
+| To learn something that came up mid-grilling, without derailing the [grilling](https://www.aihero.dev/ai-coding-dictionary/grilling) | [handoff](https://github.com/maychair/mattpocock-skills/blob/main/docs/productivity/handoff.md) out to a teaching workspace, then `teach` there |
 
 ## Prerequisites
+
+Requires a registered Workspace project. Configuration, local tickets and outputs follow the [Workspace contract](https://github.com/maychair/mattpocock-skills/blob/main/WORKSPACE.md); existing tracker and domain paths are preserved.
+
 
 `teach` builds a directory rather than producing a file, and the skill assumes one mission per workspace, so run it somewhere you are happy to give over to a single topic. Keep it out of the project you are working in. A separate repo is the best home, better than a global `~/.learnings/` folder or the working project itself. A dedicated repo also lets you commit the lessons, which is how teams have shared them.
 
@@ -56,7 +59,7 @@ Lessons are built from **components** in `assets/`: stylesheets, quiz widgets, s
 ## Common questions
 
 **Where does it put the files? Mine ended up in `~/.claude/skills`.**
-In the directory you ran `/teach` in ([#377](https://github.com/mattpocock/skills/issues/377)).
+In the resolved Local/Documents/Teaching project/topic directory ([#377](https://github.com/mattpocock/skills/issues/377)).
 
 **Do I stay in one session, or start a new one per lesson?**
 All three approaches work: staying in the same session, re-invoking `/teach` in a new session, or opening a new session in the same folder. Each lesson is its own invocation. The course state lives in the folder, not in the conversation. Common practice is to open a fresh session in the workspace and say `/teach next lesson for <topic>`.
@@ -94,4 +97,4 @@ There is no canonical answer, and the reported differences are large. Users repo
 
 `teach` is a **reach-for-it-anytime standalone**. It is not a step in a build chain and shares no artifacts with the engineering flow; it works in its own directory for as long as you study the topic.
 
-Its one real neighbour is [handoff](https://aihero.dev/skills-handoff). Together they answer "what do I do if I'm being grilled about something I don't understand?" Don't stop the grilling to learn. `/handoff` to a teaching workspace, learn the topic there with `/teach`, then go back and continue where you left off. The nearby alternative is [research](https://aihero.dev/skills-research), for when what you want is a cited document rather than lessons and retention. When you are not sure which skill or flow fits, [ask-matt](https://aihero.dev/skills-ask-matt) routes you over the whole set.
+Its one real neighbour is [handoff](https://github.com/maychair/mattpocock-skills/blob/main/docs/productivity/handoff.md). Together they answer "what do I do if I'm being grilled about something I don't understand?" Don't stop the grilling to learn. `/handoff` to a teaching workspace, learn the topic there with `/teach`, then go back and continue where you left off. The nearby alternative is [research](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/research.md), for when what you want is a cited document rather than lessons and retention. When you are not sure which skill or flow fits, [ask-matt](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/ask-matt.md) routes you over the whole set.

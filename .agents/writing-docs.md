@@ -1,3 +1,5 @@
+> Fork rule: these pages are maintained in this repository, not published to the upstream website. Use absolute links to maychair/mattpocock-skills for this fork's skill and docs pages. Retain the structure and question/evidence guidance below; upstream publishing URLs describe the original project.
+
 # Writing docs pages
 
 Every skill in `engineering/` and `productivity/` has a human-facing **docs page** at `docs/<bucket>/<skill-name>.md`. The docs tree mirrors those two bucket folders under `skills/`. It is published at `https://aihero.dev/skills-<skill-name>`; the URL is always `skills-<skill-name>` regardless of bucket, so the docs path is repo organisation only. The page is not the skill and not a copy of `SKILL.md`. Only these two buckets are promoted; the rest (`misc/`, `in-progress/`, `deprecated/`) ship no docs page.

@@ -12,10 +12,10 @@ Reach for it when a decision is blocked on knowledge that lives in one other per
 
 | The answers are in… | Reach for |
 | --- | --- |
-| Your own head, unsharpened | [grill-me](https://aihero.dev/skills-grill-me) |
-| The codebase | [grill-with-docs](https://aihero.dev/skills-grill-with-docs) |
+| Your own head, unsharpened | [grill-me](https://github.com/maychair/mattpocock-skills/blob/main/docs/productivity/grill-me.md) |
+| The codebase | [grill-with-docs](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/grill-with-docs.md) |
 | Someone else's head | `to-questionnaire` |
-| Nobody's head yet, the question needs something to react to | [prototype](https://aihero.dev/skills-prototype) |
+| Nobody's head yet, the question needs something to react to | [prototype](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/prototype.md) |
 
 The common case is a [grilling](https://www.aihero.dev/ai-coding-dictionary/grilling) session that stalls because some of the questions it raised aren't yours to answer. Run `/to-questionnaire` in that same conversation to take those questions offline, then bring the answers back and carry on.
 
@@ -26,7 +26,7 @@ The interview is two exchanges, and then it stops.
 - **Who is it going to?** Their role, their expertise, their relationship to you. This sets the tone and how much context the document has to carry. An outside client needs orienting; a teammate does not.
 - **What do you need back?** The concrete decisions or facts you can't resolve alone. This becomes the checklist for the finished document. Every item you name gets a question aimed at it.
 
-Everything after that is drafting. The skill writes the file to `to-questionnaire-<slug>.md` in the current directory. There is no setup, no workspace, and nothing to configure.
+Everything after that is drafting. The skill writes the file to `to-questionnaire-<slug>.md` in the resolved Workspace scratch directory. A registered project supplies its identity.
 
 ## The document
 
@@ -55,7 +55,7 @@ No. The dependent-question design was explored and did not ship. The output is a
 The document tells them to say so. It explicitly asks for "I don't know" and partial answers. A flagged uncertainty is worth more than a guess, because a vague answer and a confidently wrong one look identical once they're back in your context.
 
 **Does it send it anywhere (Slack, an issue tracker, email)?**
-No. It writes a Markdown file in the current directory and tells you the path. Delivery is yours: paste it into a [ticket](https://www.aihero.dev/ai-coding-dictionary/ticket), drop it in a Slack thread, attach it to an email, or open it on a shared screen and work through it live. People have done all four by hand.
+No. It writes a Markdown file in Workspace scratch storage and tells you the actual path. Delivery is yours: paste it into a [ticket](https://www.aihero.dev/ai-coding-dictionary/ticket), drop it in a Slack thread, attach it to an email, or open it on a shared screen and work through it live. People have done all four by hand.
 
 **Isn't this just `/grill-me` in batch mode?**
 No. `grill-me` already asks in **rounds**. It asks the whole frontier of open questions at once, then recomputes it from your answers, so it already meets the "give me all the questions at once" need. `to-questionnaire` differs on another axis. It is about whose head the answers are in, not how the questions are delivered. To answer them yourself faster, use `grill-me`. To get them out of someone else, use this.
@@ -71,8 +71,12 @@ Yes, and plenty of people did before it existed: `OPEN_QUESTIONS.md` files, spre
 - You could hand the file to someone who wasn't in the conversation and they would know why they got it and by when to reply.
 - The answers that come back are usable input for a new grilling round, rather than a fresh set of questions.
 
+## Prerequisites
+
+Requires a registered Workspace project. Configuration, local tickets and outputs follow the [Workspace contract](https://github.com/maychair/mattpocock-skills/blob/main/WORKSPACE.md); existing tracker and domain paths are preserved.
+
 ## Where it fits
 
 `to-questionnaire` is a reach-for-it-anytime standalone. You use it where your own knowledge ends and the next move is to ask another person, not to run another skill. That is most often mid-flow, when planning has stalled on something that isn't yours to decide.
 
-Its neighbour is [grill-me](https://aihero.dev/skills-grill-me), and the two differ on where the answers live. Grilling gets the answers from you; a questionnaire gets them from someone else. Feed what comes back into another grilling round, or into [grill-with-docs](https://aihero.dev/skills-grill-with-docs) or [to-spec](https://aihero.dev/skills-to-spec) if the work is heading for a build. When you're unsure which skill fits the moment, [ask-matt](https://aihero.dev/skills-ask-matt) routes you.
+Its neighbour is [grill-me](https://github.com/maychair/mattpocock-skills/blob/main/docs/productivity/grill-me.md), and the two differ on where the answers live. Grilling gets the answers from you; a questionnaire gets them from someone else. Feed what comes back into another grilling round, or into [grill-with-docs](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/grill-with-docs.md) or [to-spec](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/to-spec.md) if the work is heading for a build. When you're unsure which skill fits the moment, [ask-matt](https://github.com/maychair/mattpocock-skills/blob/main/docs/engineering/ask-matt.md) routes you.
