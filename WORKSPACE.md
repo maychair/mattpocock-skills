@@ -10,6 +10,8 @@ At the Workspace root, add `--project <registered-id>`. In a project or subdirec
 
 Read the selected project's applicable AGENTS/CLAUDE instructions and its returned central configuration before project work. Missing, ambiguous or invalid identities stop the operation. There is no ordinary-repository fallback. Registered primary identity chooses configuration and storage; a worktree's temporary basename does not choose another configuration. Consult Graphify and Workspace LSP when code navigation benefits from them and they are available; follow the owning project's edit and validation policy. This adapter adds no worktree or branch policy.
 
+When an invoked flow delegates work, include the resolved `workspace_root`, `project_id`, `source_root` and selected effort/output paths in each brief. A child in an external worktree must resolve again with explicit `--workspace`, `--project` and `--checkout` arguments. Passing identity does not expand the child's task scope or authorize another workflow.
+
 ## Configuration and trackers
 
 `setup-matt-pocock-skills` uses `workspace.py setup`. A new project defaults to Local Markdown. Existing central entries are preserved byte for byte, including remote tracker choices and custom domain paths. Setup writes only `paths.config`; it creates no sample tickets, project agent-entry block or domain skeleton. For an explicit configuration change, read the entry, present the requested change and edit only that entry.
